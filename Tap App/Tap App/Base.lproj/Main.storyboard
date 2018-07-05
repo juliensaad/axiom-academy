@@ -37,6 +37,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6v-Np-Jrn">
+                                <rect key="frame" x="117" y="345" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Leaderboard"/>
+                                <connections>
+                                    <segue destination="VQ1-Za-i6U" kind="show" id="kop-cO-ZrZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -131,6 +139,74 @@
             </objects>
             <point key="canvasLocation" x="-92" y="49"/>
         </scene>
+        <!--Leaderboard View Controller-->
+        <scene sceneID="dq4-Rt-5V0">
+            <objects>
+                <viewController id="VQ1-Za-i6U" customClass="LeaderboardViewController" customModule="Tap_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IfE-DM-Jub">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAB-kE-qOE">
+                                <rect key="frame" x="274" y="32" width="30" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="VQ1-Za-i6U" eventType="touchUpInside" id="VEP-bt-5EQ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fak-fP-pMH">
+                                <rect key="frame" x="0.0" y="81" width="320" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="match" rowHeight="139" id="ghK-4U-rcN" customClass="MatchTableViewCell" customModule="Tap_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghK-4U-rcN" id="oQR-Y3-GbM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="138.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poutine" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-Ow-z4H">
+                                                    <rect key="frame" x="194" y="19" width="111" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VQ1-Za-i6U" id="qye-8k-srn"/>
+                                    <outlet property="delegate" destination="VQ1-Za-i6U" id="vh6-xs-al2"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSR-w0-5w4">
+                                <rect key="frame" x="111" y="42" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OLn-2P-cxl" firstAttribute="trailing" secondItem="Fak-fP-pMH" secondAttribute="trailing" id="9wc-Ff-EvE"/>
+                            <constraint firstItem="OLn-2P-cxl" firstAttribute="trailing" secondItem="uAB-kE-qOE" secondAttribute="trailing" constant="16" id="Ume-AK-n8K"/>
+                            <constraint firstItem="Fak-fP-pMH" firstAttribute="top" secondItem="uAB-kE-qOE" secondAttribute="bottom" id="Xxn-FL-wy6"/>
+                            <constraint firstItem="uAB-kE-qOE" firstAttribute="top" secondItem="OLn-2P-cxl" secondAttribute="top" constant="12" id="Zga-PF-Eu0"/>
+                            <constraint firstItem="OLn-2P-cxl" firstAttribute="bottom" secondItem="Fak-fP-pMH" secondAttribute="bottom" id="gM2-Nr-n7E"/>
+                            <constraint firstItem="ZSR-w0-5w4" firstAttribute="centerX" secondItem="OLn-2P-cxl" secondAttribute="centerX" id="j07-fQ-7mq"/>
+                            <constraint firstItem="ZSR-w0-5w4" firstAttribute="top" secondItem="OLn-2P-cxl" secondAttribute="top" constant="22" id="oMy-hv-hgW"/>
+                            <constraint firstItem="Fak-fP-pMH" firstAttribute="leading" secondItem="OLn-2P-cxl" secondAttribute="leading" id="vUD-fN-T7N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OLn-2P-cxl"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Fak-fP-pMH" id="quY-Tx-PMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59M-Mk-eEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95.625" y="850.35211267605632"/>
+        </scene>
         <!--Victory View Controller-->
         <scene sceneID="KaV-NK-2PI">
             <objects>
@@ -216,4 +292,7 @@
             <point key="canvasLocation" x="1071" y="308"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="poutine" width="137" height="91"/>
+    </resources>
 </document>
