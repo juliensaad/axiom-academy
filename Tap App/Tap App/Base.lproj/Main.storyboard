@@ -166,12 +166,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="138.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poutine" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-Ow-z4H">
-                                                    <rect key="frame" x="194" y="19" width="111" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poutine" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-Ow-z4H">
+                                                    <rect key="frame" x="168" y="28" width="137" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="axd-HN-xze"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qkp-Ow-z4H" firstAttribute="top" secondItem="oQR-Y3-GbM" secondAttribute="top" constant="28" id="HTc-8H-HO5"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qkp-Ow-z4H" secondAttribute="bottom" constant="20.5" id="uYI-lE-mre"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qkp-Ow-z4H" secondAttribute="trailing" constant="15" id="y2E-4B-17G"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="matchImage" destination="Qkp-Ow-z4H" id="Dgh-b6-T5e"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

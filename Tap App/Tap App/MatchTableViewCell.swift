@@ -10,6 +10,8 @@ import UIKit
 
 class MatchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var matchImage: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

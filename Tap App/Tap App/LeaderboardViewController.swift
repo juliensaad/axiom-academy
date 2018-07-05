@@ -49,7 +49,16 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = MatchTableViewCell(style: .default, reuseIdentifier: "match")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "match", for: indexPath) as! MatchTableViewCell
+
+        if indexPath.row == 0 {
+            cell.matchImage.image = #imageLiteral(resourceName: "poutine")
+        }
+        else {
+            cell.matchImage.image = #imageLiteral(resourceName: "Icon")
+        }
+
+        cell.textLabel?.textColor = UIColor(red: 144/255, green: 154/255, blue: 23/255, alpha: 1.0)
         cell.textLabel?.text = fruits[indexPath.row]
 
         return cell
@@ -58,5 +67,4 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     }
-
 }
