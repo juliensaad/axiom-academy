@@ -13,6 +13,7 @@
 		1D07E86520E9CF75002F8E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D07E86420E9CF75002F8E93 /* Assets.xcassets */; };
 		1D07E86820E9CF75002F8E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D07E86620E9CF75002F8E93 /* LaunchScreen.storyboard */; };
 		1D07E87020E9FEEA002F8E93 /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D07E86F20E9FEEA002F8E93 /* VictoryViewController.swift */; };
+		1D34677520EDA8100009CDA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34677420EDA8100009CDA3 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1D07E86720E9CF75002F8E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D07E86920E9CF75002F8E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D07E86F20E9FEEA002F8E93 /* VictoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
+		1D34677420EDA8100009CDA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1D07E86620E9CF75002F8E93 /* LaunchScreen.storyboard */,
 				1D07E86920E9CF75002F8E93 /* Info.plist */,
 				1D07E86F20E9FEEA002F8E93 /* VictoryViewController.swift */,
+				1D34677420EDA8100009CDA3 /* HomeViewController.swift */,
 			);
 			path = "Tap App";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				1D07E86020E9CF74002F8E93 /* ViewController.swift in Sources */,
 				1D07E87020E9FEEA002F8E93 /* VictoryViewController.swift in Sources */,
 				1D07E85E20E9CF74002F8E93 /* AppDelegate.swift in Sources */,
+				1D34677520EDA8100009CDA3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

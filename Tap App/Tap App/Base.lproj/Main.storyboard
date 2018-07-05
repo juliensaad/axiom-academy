@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mG1-fT-kfL">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tdu-F5-fIY">
+            <objects>
+                <viewController id="mG1-fT-kfL" customClass="HomeViewController" customModule="Tap_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6R-p3-3Sf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON6-gz-1Lw">
+                                <rect key="frame" x="121" y="269" width="78" height="30"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Y4I-JF-Y5G"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-Sa-ZS0">
+                                <rect key="frame" x="109.5" y="107" width="102.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Son-Xx-cTC">
+                                <rect key="frame" x="109.5" y="168" width="102.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Son-Xx-cTC" firstAttribute="top" secondItem="pfI-Sa-ZS0" secondAttribute="bottom" constant="31" id="Eva-dM-RMD"/>
+                            <constraint firstItem="pfI-Sa-ZS0" firstAttribute="top" secondItem="Xdl-yo-E89" secondAttribute="top" constant="87" id="Naa-gf-rIW"/>
+                            <constraint firstItem="Son-Xx-cTC" firstAttribute="centerX" secondItem="Xdl-yo-E89" secondAttribute="centerX" id="XzD-70-MwG"/>
+                            <constraint firstItem="pfI-Sa-ZS0" firstAttribute="centerX" secondItem="Xdl-yo-E89" secondAttribute="centerX" id="dOn-tO-Sq2"/>
+                            <constraint firstItem="ON6-gz-1Lw" firstAttribute="centerX" secondItem="Xdl-yo-E89" secondAttribute="centerX" id="lLh-i8-wpU"/>
+                            <constraint firstItem="ON6-gz-1Lw" firstAttribute="top" secondItem="Son-Xx-cTC" secondAttribute="bottom" constant="71" id="pon-wv-wys"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xdl-yo-E89"/>
+                    </view>
+                    <connections>
+                        <outlet property="player1textField" destination="pfI-Sa-ZS0" id="yyj-E8-j3L"/>
+                        <outlet property="player2textField" destination="Son-Xx-cTC" id="CZf-WW-WoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KL-d8-vQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-998" y="69"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -72,6 +120,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomButton" destination="qyZ-VB-i9H" id="jVl-jy-WZR"/>
+                        <outlet property="player1ScoreLabel" destination="Wc9-FK-uQe" id="p46-UK-7t9"/>
+                        <outlet property="player2ScoreLabel" destination="220-Rh-dZj" id="Gaf-Gb-o3M"/>
                         <outlet property="topButton" destination="eHE-m0-k2w" id="JT8-d5-SRa"/>
                         <segue destination="Olz-dJ-VHt" kind="show" identifier="player1win" id="b8i-Cb-OYZ"/>
                         <segue destination="cPQ-M0-PTt" kind="show" identifier="player2win" id="9OW-kc-BGz"/>
