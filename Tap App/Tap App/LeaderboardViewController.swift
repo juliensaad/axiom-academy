@@ -15,12 +15,12 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
         dismiss(animated: true, completion: nil)
     }
 
-    var fruits = ["🍌", "🍎", "🍑", "🍇", "🍐", "🍉"]
+    var matches: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fruits = shuffled(array: fruits)
+        matches = getGameHistory()
     }
 
     func shuffled(array: [String]) -> [String] {
@@ -45,21 +45,14 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK : UITableView
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        return matches.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "match", for: indexPath) as! MatchTableViewCell
 
-        if indexPath.row == 0 {
-            cell.matchImage.image = #imageLiteral(resourceName: "poutine")
-        }
-        else {
-            cell.matchImage.image = #imageLiteral(resourceName: "Icon")
-        }
-
         cell.textLabel?.textColor = UIColor(red: 144/255, green: 154/255, blue: 23/255, alpha: 1.0)
-        cell.textLabel?.text = fruits[indexPath.row]
+        cell.textLabel?.text = matches[indexPath.row]
 
         return cell
     }

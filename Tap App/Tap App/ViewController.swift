@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         feedbackGenerator.impactOccurred()
 
         if topCount >= 20 {
+            saveGame(winnerName: player1name, loserName: player2name)
             player1Score = player1Score + 1
             performSegue(withIdentifier: "player1win", sender: self)
         }
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
         feedbackGenerator.impactOccurred()
 
         if bottomCount >= 20 {
+            saveGame(winnerName: player2name, loserName: player1name)
             player2Score = player2Score + 1
             performSegue(withIdentifier: "player2win", sender: self)
         }
@@ -66,11 +68,6 @@ class ViewController: UIViewController {
         feedbackGenerator.prepare()
         reset()
     }
-
-
-
-
-
 
     
 }

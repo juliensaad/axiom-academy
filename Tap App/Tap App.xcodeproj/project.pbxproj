@@ -16,6 +16,7 @@
 		1D34677520EDA8100009CDA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34677420EDA8100009CDA3 /* HomeViewController.swift */; };
 		1D34677B20EDB5EF0009CDA3 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34677A20EDB5EF0009CDA3 /* LeaderboardViewController.swift */; };
 		1D34677D20EDEA3E0009CDA3 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D34677C20EDEA3E0009CDA3 /* MatchTableViewCell.swift */; };
+		1DE35E9120EEF93A00C27A57 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE35E9020EEF93A00C27A57 /* GameData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1D34677420EDA8100009CDA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1D34677A20EDB5EF0009CDA3 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		1D34677C20EDEA3E0009CDA3 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		1DE35E9020EEF93A00C27A57 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1D07E86920E9CF75002F8E93 /* Info.plist */,
 				1D07E86F20E9FEEA002F8E93 /* VictoryViewController.swift */,
 				1D34677420EDA8100009CDA3 /* HomeViewController.swift */,
+				1DE35E9020EEF93A00C27A57 /* GameData.swift */,
 			);
 			path = "Tap App";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				1D34677D20EDEA3E0009CDA3 /* MatchTableViewCell.swift in Sources */,
 				1D07E87020E9FEEA002F8E93 /* VictoryViewController.swift in Sources */,
 				1D34677B20EDB5EF0009CDA3 /* LeaderboardViewController.swift in Sources */,
+				1DE35E9120EEF93A00C27A57 /* GameData.swift in Sources */,
 				1D07E85E20E9CF74002F8E93 /* AppDelegate.swift in Sources */,
 				1D34677520EDA8100009CDA3 /* HomeViewController.swift in Sources */,
 			);
